@@ -1,0 +1,81 @@
+body {
+    background: #cdcdcd;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,h2,h3 {
+    font-family: "Bangers", sans-serif;
+}
+
+.webshop__title {
+    text-align: center;
+    font-size: 4em;
+    letter-spacing: 7px;
+    color: #ffffff;
+    text-shadow: 1px 2px 2px #333;
+}
+
+.tshirts {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+
+.tshirt {
+    background: #cdcdcd;
+    color: #333333;
+    box-shadow: 0 0 6px 1px #555
+}
+
+.tshirt__model {
+    text-align: center;
+    font-weight: normal;
+    color: #ffffff;
+    background: #000000;
+    margin: 0;
+    padding: 5px;
+}
+
+.tshirt__image {
+    max-width: 100%;
+    height: auto;
+}
+
+.tshirt__size {
+    font-style: normal;
+    display: block;
+    padding: 10px;
+    background: #ffffff;
+}
+
+.tshirt__color {
+    font-style: normal;
+    display: block;
+    padding: 10px;
+    background: #ffffff;
+}
+
+
+.tshirt__link {
+    display: block;
+    padding: 10px;
+    background: #4bb310;
+    color: #ffffff;
+    transition: all ease-in 0.2s;
+}
+
+.tshirt__link:hover {
+    background: #367f0c;;
+}
+
+.tshirt__soldout {
+    display: block;
+    padding: 10px;
+    background: #ff0000;
+    color: #ffffff;
+    font-style: normal;
+    text-align: center;
+}

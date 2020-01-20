@@ -1,0 +1,13 @@
+.tshirt-detail {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-gap: 20px;
+    padding: 40px;
+    background: #ffffff;
+}
+
+.tshirt-detail__title {
+    margin: 0;
+}
