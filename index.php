@@ -1,5 +1,5 @@
 <?php
-//Verbinding maken met PDO
+//Verbindings gegevens instellen
 $hostname = '127.0.0.1';
 $username = 'root';
 $password = 'root';
@@ -9,7 +9,7 @@ try {
     $connection = new PDO('mysql:host=' . $hostname . ';dbname=' . $database, $username, $password);
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Statement echt uitvoeren
+    // SQL statement uitvoeren: alle tshirts ophalen gesorteerd op naam van het model
     $statement = $connection->query("SELECT * FROM `tshirts` ORDER BY `modelshirt`");
 
 } catch (PDOException $e) {
@@ -35,7 +35,9 @@ try {
     <div class="tshirts">
         <?php foreach ($statement as $tshirt) { ?>
             <div class="tshirt">
+
                 <h2 class="tshirt__model"><?php echo $tshirt['modelshirt'] ?></h2>
+
                 <img src="images/<?php echo $tshirt['image'] ?>" class="tshirt__image"/>
 
                 <em class="tshirt__color">Kleur: <?php echo $tshirt['kleur'] ?></em>
@@ -43,9 +45,13 @@ try {
                 <em class="tshirt__size">Maat: <?php echo $tshirt['maat'] ?></em>
 
                 <?php if ($tshirt['voorraad'] > 0) { ?>
+
                     <a class="tshirt__link" href="tshirt.php?id=<?php echo $tshirt['id'] ?>">Meer informatie</a>
+
                 <?php } else { ?>
+
                     <em class="tshirt__soldout"">UITVERKOCHT</em>
+
                 <?php } ?>
 
             </div>
